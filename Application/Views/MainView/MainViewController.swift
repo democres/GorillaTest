@@ -14,6 +14,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var tableView: UITableView?
     
     var recipes = [Recipe]()
+    var recipesAux = [Recipe]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         tableView?.estimatedRowHeight = 66
         loadReceipts()
         
-        
+        textField?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +39,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     func loadReceipts(){
         RecipesController.getAllRecipes { receipts in
             self.recipes = receipts
+            self.recipesAux = receipts
             DispatchQueue.main.async {
                 self.tableView?.reloadData()
             }
@@ -75,6 +77,29 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
 extension MainViewController: UITextFieldDelegate{
     //MARK: TextField Delegates
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        recipes = recipesAux.filter({ (Recipe) -> Bool in
+            return Recipe.title?.localizedCaseInsensitiveContains(textField.text ?? "") ?? false
+        })
+        if textField.text?.count == 0 {
+            recipes = recipesAux
+        }
+        tableView?.reloadData()
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        recipes = recipesAux.filter({ (Recipe) -> Bool in
+            return Recipe.title?.localizedCaseInsensitiveContains(textField.text ?? "") ?? false
+        })
+        if textField.text?.count == 0 {
+            recipes = recipesAux
+        }
+        tableView?.reloadData()
+        textField.resignFirstResponder()
         return true
     }
 
