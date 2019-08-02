@@ -97,7 +97,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         return 66
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "detailVC") as! DetailViewController
         viewController.recipeId = self.recipes[indexPath.row].id ?? 0

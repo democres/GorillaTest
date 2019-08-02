@@ -8,11 +8,11 @@
 
 import UIKit
 import Cosmos
+import AlamofireImage
 
 class DetailViewController: UIViewController {
     
     var recipeId: Int?
-    
     var recipe: RecipeDetail?
     
     @IBOutlet weak var image: UIImageView?
@@ -22,25 +22,32 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.titleView?.backgroundColor = hexToUIColor(hex: "#FC941C") //YELLOW
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.barTintColor = hexToUIColor(hex: "#FC941C") //YELLOW
+        self.navigationController?.navigationBar.tintColor = .white
         
         RecipesController.getReceiptById(id: recipeId ?? 0) { recipeDetail in
             self.recipe = recipeDetail
-            
-            self.setupViews()
+            DispatchQueue.main.async {
+                self.setupViews()
+            }
         }
     }
+
     
     func setupViews(){
         
-        DispatchQueue.main.async {
-            detail?.text = recipe?.instructions
-            ratingStars?.rating = Double(recipe?.rating ?? 0)
-        }
+        self.navigationItem.title = recipe?.title ?? ""
+        
+        image?.contentMode = .scaleAspectFit
+        detail?.text = recipe?.instructions
+        ratingStars?.rating = Double(recipe?.rating ?? 0)
+        guard let url = URL(string:recipe?.image ?? "") else { return }
+        image?.af_setImage(withURL: url)
+        
     }
     
 }

@@ -124,35 +124,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKZ-6s-oEl">
-                                <rect key="frame" x="20" y="357" width="335" height="290"/>
+                                <rect key="frame" x="20" y="398.5" width="335" height="248.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jwe-8e-4Yr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="230"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="281.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="Zy7-vn-j8b"/>
+                                    <constraint firstAttribute="width" secondItem="Jwe-8e-4Yr" secondAttribute="height" multiplier="4:3" id="w3f-mS-B1W"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1n-LC-omb" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="128" y="275" width="119" height="57"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-xR-HxZ" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="77" y="330.5" width="221" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="Aam-Na-yg2"/>
+                                    <constraint firstAttribute="height" constant="55" id="D72-eW-SwQ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="e1n-LC-omb" firstAttribute="top" secondItem="Jwe-8e-4Yr" secondAttribute="bottom" constant="25" id="1qz-ad-Pnl"/>
-                            <constraint firstItem="e1n-LC-omb" firstAttribute="leading" secondItem="tnW-DO-0MJ" secondAttribute="leading" constant="128" id="84Z-f3-QLN"/>
-                            <constraint firstItem="Jwe-8e-4Yr" firstAttribute="top" secondItem="tnW-DO-0MJ" secondAttribute="top" id="ClO-8i-BHO"/>
+                            <constraint firstItem="RCM-xR-HxZ" firstAttribute="top" secondItem="Jwe-8e-4Yr" secondAttribute="bottom" constant="39" id="1s6-aD-KRY"/>
+                            <constraint firstItem="Jwe-8e-4Yr" firstAttribute="top" secondItem="XTQ-Rj-ebl" secondAttribute="top" constant="10" id="ClO-8i-BHO"/>
+                            <constraint firstItem="tnW-DO-0MJ" firstAttribute="trailing" secondItem="RCM-xR-HxZ" secondAttribute="trailing" constant="77" id="EY1-ka-l47"/>
                             <constraint firstItem="tnW-DO-0MJ" firstAttribute="bottom" secondItem="eKZ-6s-oEl" secondAttribute="bottom" constant="20" id="MI3-TI-tgc"/>
-                            <constraint firstItem="eKZ-6s-oEl" firstAttribute="top" secondItem="e1n-LC-omb" secondAttribute="bottom" constant="25" id="V8L-HT-Low"/>
-                            <constraint firstItem="tnW-DO-0MJ" firstAttribute="trailing" secondItem="e1n-LC-omb" secondAttribute="trailing" constant="128" id="WDu-V5-5oH"/>
+                            <constraint firstItem="eKZ-6s-oEl" firstAttribute="top" secondItem="RCM-xR-HxZ" secondAttribute="bottom" constant="13" id="V7l-vv-3SP"/>
                             <constraint firstItem="tnW-DO-0MJ" firstAttribute="trailing" secondItem="Jwe-8e-4Yr" secondAttribute="trailing" id="XRN-Rn-J4c"/>
+                            <constraint firstItem="RCM-xR-HxZ" firstAttribute="leading" secondItem="tnW-DO-0MJ" secondAttribute="leading" constant="77" id="hLM-7q-xny"/>
                             <constraint firstItem="Jwe-8e-4Yr" firstAttribute="leading" secondItem="tnW-DO-0MJ" secondAttribute="leading" id="rLI-j4-PAb"/>
                             <constraint firstItem="eKZ-6s-oEl" firstAttribute="leading" secondItem="tnW-DO-0MJ" secondAttribute="leading" constant="20" id="tUK-Pv-EN9"/>
                             <constraint firstItem="tnW-DO-0MJ" firstAttribute="trailing" secondItem="eKZ-6s-oEl" secondAttribute="trailing" constant="20" id="zmI-i5-ahw"/>
@@ -162,7 +170,7 @@
                     <connections>
                         <outlet property="detail" destination="eKZ-6s-oEl" id="qUg-yZ-7GG"/>
                         <outlet property="image" destination="Jwe-8e-4Yr" id="sCo-Oc-Fcu"/>
-                        <outlet property="ratingStars" destination="Jwe-8e-4Yr" id="AGZ-GY-rAX"/>
+                        <outlet property="ratingStars" destination="RCM-xR-HxZ" id="LDB-tB-sa5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e96-Q9-pKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
