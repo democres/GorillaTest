@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.8.2"
+github "Alamofire/AlamofireImage" "3.5.2"
+github "evgenyneu/Cosmos" "19.0.3"
+github "tristanhimmelman/ObjectMapper" "3.5.1"
