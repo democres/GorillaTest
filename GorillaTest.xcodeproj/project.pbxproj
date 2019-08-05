@@ -23,8 +23,8 @@
 		27B90B9922A7695B00FAA33E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B90B9722A7695B00FAA33E /* Main.storyboard */; };
 		27B90B9B22A7695C00FAA33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B90B9A22A7695C00FAA33E /* Assets.xcassets */; };
 		27B90B9E22A7695C00FAA33E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B90B9C22A7695C00FAA33E /* LaunchScreen.storyboard */; };
-		27B90BA922A7695C00FAA33E /* ArmyOfOnesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B90BA822A7695C00FAA33E /* ArmyOfOnesTests.swift */; };
-		27B90BB422A7695C00FAA33E /* ArmyOfOnesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B90BB322A7695C00FAA33E /* ArmyOfOnesUITests.swift */; };
+		27B90BA922A7695C00FAA33E /* GorillaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B90BA822A7695C00FAA33E /* GorillaTestTests.swift */; };
+		27B90BB422A7695C00FAA33E /* GorillaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B90BB322A7695C00FAA33E /* GorillaTestUITests.swift */; };
 		27B90BDE22A7766000FAA33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B90B9A22A7695C00FAA33E /* Assets.xcassets */; };
 		27B90BDF22A7766100FAA33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B90B9A22A7695C00FAA33E /* Assets.xcassets */; };
 		27B90BE222A7CA5C00FAA33E /* galaxieCopernicus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27B90BE122A7CA5C00FAA33E /* galaxieCopernicus.ttf */; };
@@ -221,10 +221,10 @@
 		27B90B9D22A7695C00FAA33E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B90B9F22A7695C00FAA33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B90BA422A7695C00FAA33E /* GorillaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B90BA822A7695C00FAA33E /* ArmyOfOnesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyOfOnesTests.swift; sourceTree = "<group>"; };
+		27B90BA822A7695C00FAA33E /* GorillaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTestTests.swift; sourceTree = "<group>"; };
 		27B90BAA22A7695C00FAA33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B90BAF22A7695C00FAA33E /* GorillaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B90BB322A7695C00FAA33E /* ArmyOfOnesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyOfOnesUITests.swift; sourceTree = "<group>"; };
+		27B90BB322A7695C00FAA33E /* GorillaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTestUITests.swift; sourceTree = "<group>"; };
 		27B90BB522A7695C00FAA33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B90BE122A7CA5C00FAA33E /* galaxieCopernicus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxieCopernicus.ttf; sourceTree = "<group>"; };
 		27B90BE522A7CA6600FAA33E /* hugeFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hugeFont.ttf; sourceTree = "<group>"; };
@@ -1835,7 +1835,7 @@
 		27B90BA722A7695C00FAA33E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				27B90BA822A7695C00FAA33E /* ArmyOfOnesTests.swift */,
+				27B90BA822A7695C00FAA33E /* GorillaTestTests.swift */,
 				27B90BAA22A7695C00FAA33E /* Info.plist */,
 			);
 			path = Tests;
@@ -1844,7 +1844,7 @@
 		27B90BB222A7695C00FAA33E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				27B90BB322A7695C00FAA33E /* ArmyOfOnesUITests.swift */,
+				27B90BB322A7695C00FAA33E /* GorillaTestUITests.swift */,
 				27B90BB522A7695C00FAA33E /* Info.plist */,
 			);
 			path = UITests;
@@ -4887,7 +4887,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B90BA922A7695C00FAA33E /* ArmyOfOnesTests.swift in Sources */,
+				27B90BA922A7695C00FAA33E /* GorillaTestTests.swift in Sources */,
 				276E89F922A7D50300260E67 /* API.swift in Sources */,
 				276E89F422A7D06200260E67 /* UIColor.swift in Sources */,
 				276E8A0322A7E37F00260E67 /* UIViewController.swift in Sources */,
@@ -4898,7 +4898,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B90BB422A7695C00FAA33E /* ArmyOfOnesUITests.swift in Sources */,
+				27B90BB422A7695C00FAA33E /* GorillaTestUITests.swift in Sources */,
 				276E89FA22A7D50300260E67 /* API.swift in Sources */,
 				276E89F522A7D06200260E67 /* UIColor.swift in Sources */,
 				276E8A0422A7E37F00260E67 /* UIViewController.swift in Sources */,

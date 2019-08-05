@@ -19,7 +19,6 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        colorAnimations()
         self.hideKeyboardWhenTappedAround()
         setupViews()
         
@@ -34,6 +33,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        colorAnimations()
     }
     
     func loadReceipts(){
